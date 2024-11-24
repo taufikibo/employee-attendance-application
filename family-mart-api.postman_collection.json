@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "185efe5e-ed73-4b49-8e31-8f16c5a88088",
+		"name": "family-mart-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2679392",
+		"_collection_link": "https://bold-moon-251022.postman.co/workspace/My-Workspace~7b5aa647-9d02-4545-84ea-42985e511d5c/collection/2679392-185efe5e-ed73-4b49-8e31-8f16c5a88088?action=share&source=collection_link&creator=2679392"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "taufiq",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "taufiq@hidayat.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1994-06-27",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "081380706026",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Pria",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/Users/ppe-nb0385/Downloads/aperture-black-blur-274973-800x600.jpg"
+						},
+						{
+							"key": "address",
+							"value": "jl test",
+							"type": "text"
+						},
+						{
+							"key": "nik",
+							"value": "2323232323",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "IT",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "backend",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "20000000",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMyNDc0NjUxLCJleHAiOjE3MzI0NzgyNTEsIm5iZiI6MTczMjQ3NDY1MSwianRpIjoiVllpc1o5RTB2TFNpSUFoUiIsInN1YiI6IjEiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.ovQyll8Bu3zcCQztrzJfDvmkyzCpkovlvzW0OVpjadQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/Users/ppe-nb0385/Downloads/aperture-black-blur-274973-800x600.jpg"
+						},
+						{
+							"key": "description",
+							"value": "lembur",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/absence"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMyNDc1MTI4LCJleHAiOjE3MzI0Nzg3MjgsIm5iZiI6MTczMjQ3NTEyOCwianRpIjoiSjV4dUVpcTN1NU5NYjM3MCIsInN1YiI6IjEiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.l0wsxa37MRvGCfJmpRE3Tz0zc76ANxnRMEhuVICqZeU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"taufiq@hidayat.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		}
+	]
+}
